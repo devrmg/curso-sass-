@@ -1,0 +1,116 @@
+$bg: red;
+$bg-section: rgba(0, 0, 0, 0.7);
+$font-color: #ffffff;
+$margin: 10px 20px 34px 21px;
+body {
+  background: $bg;
+  color: $font-color;
+}
+
+section {
+  background: $bg-section;
+}
+
+h1 {
+  background-color: $bg;
+  margin: $margin;
+  font  {
+    color: $bg-section;
+
+  }
+}
+
+$linecolor :#145258;
+
+li {
+  color: $linecolor;
+}
+ /* Interpolação */
+ 
+ $name: destaque;
+$attr: border;
+
+
+p.#{$name} {
+  #{$attr}-color: blue;
+}
+h1 {
+  $font-size: 12px;
+  $line-height: 30px;
+  font: #{$font-size}/#{$line-height};
+}
+
+/*extend */
+/* Também é possível herdar estilos de pseudo-elementos:*/
+.msg {
+  border: 1px solid;
+  padding: 4px;
+  text-align: center;
+}
+
+.msg-error {
+  @extend .msg;
+  border-color: #ff0000;
+  color: #ff0000;
+}
+
+.msg-alert {
+  @extend .msg ;
+  border-color: #ff8e00;
+  color: #ff8e00;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.hoverlink {
+  @extend a:hover;
+}
+
+/* Operações */
+p {
+	$width: 1000px;
+	width: $width/2;
+}
+
+$width: 1000px;
+$base-size: 20px;
+$line-height: 22px;
+
+p {
+  font: 10px/8px bold italic serif; // Imprime CSS
+  width: $width/2; // Divisão pois usa uma variável
+  width: round(1.5)/2; // Divisão pois usa uma função
+  height: (500px/2); // Divisão pois usa parênteses
+  margin-left: 5px + 8px/2px;  // Divisão pois usa uma expressão aritimética
+  font: (italic bold 10px/8px); 
+  font-size: #{$base-size} / #{$line-height}; // Usa interpolção e imprime CSS 
+}
+$font-size: 27px; 
+
+p {
+	font-size: $font-size % 2;
+}
+
+/* Mixins */
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin titulo($size, $color: blue) {
+  color: $color;
+  font-size: $size;
+}
+
+h1 {
+  @include titulo(14px);
+}
+
+h1 {
+  @include titulo(14px, green);
+}  

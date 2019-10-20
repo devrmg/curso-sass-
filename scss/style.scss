@@ -1,0 +1,46 @@
+body {
+  background: #000;
+}
+
+h1 {
+  color:red;
+}
+p {
+  font-family: 'Courier New', Courier, monospace ;
+  color: #fff; 
+}
+
+nav {
+  background: rgb(124, 28, 28);
+  width: 100%;
+
+ul {
+  list-style: none;
+  padding: 20px 0;
+}
+li{
+  color:blue;
+  margin: 0 20px;
+  font: {
+    family: Arial;
+    size:14px;
+  }
+}
+}
+
+nav {
+  font: {
+    family: "Times";
+    style: italic;
+    size:30px;
+    weight: bold;
+  }
+}
+/* Hover em SASS */
+
+a {
+  color: #ffa;
+  &:hover{
+    color: #faf;
+  }
+}
