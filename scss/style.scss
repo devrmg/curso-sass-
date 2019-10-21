@@ -44,3 +44,12 @@ a {
     color: #faf;
   }
 }
+
+$titulo: #544578;
+$teto : Georgia;
+
+h3 {
+  color: $titulo;
+  font-family: $teto;
+}
+  

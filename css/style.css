@@ -1,36 +1,51 @@
 body {
-  background: #000; }
+  background: #000;
+}
 
 h1 {
-  color: red; }
+  color: red;
+}
 
 p {
-  font-family: "Courier New", Courier, monospace;
-  color: #fff; }
+  font-family: 'Courier New', Courier, monospace;
+  color: #fff;
+}
 
 nav {
   background: #7c1c1c;
-  width: 100%; }
-  nav ul {
-    list-style: none;
-    padding: 20px 0; }
-  nav li {
-    color: blue;
-    margin: 0 20px;
-    font-family: Arial;
-    font-size: 14px; }
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  padding: 20px 0;
+}
+
+nav li {
+  color: blue;
+  margin: 0 20px;
+  font-family: Arial;
+  font-size: 14px;
+}
 
 nav {
   font-family: "Times";
   font-style: italic;
   font-size: 30px;
-  font-weight: bold; }
+  font-weight: bold;
+}
 
 /* Hover em SASS */
 a {
-  color: #ffa; }
-  a:hover {
-    color: #faf; }
-    
+  color: #ffa;
+}
 
+a:hover {
+  color: #faf;
+}
+
+h3 {
+  color: #544578;
+  font-family: Georgia;
+}
 /*# sourceMappingURL=style.css.map */
