@@ -64,6 +64,65 @@ h1 {
 h1 {
   color: green;
   font-size: 14px; }
-  
+
+/* Funcoes */
+div {
+  width: 65%; }
+
+/* Place Holder */
+div, .container {
+  display: block;
+  margin: 0 auto; }
+
+/* -------------------------*/
+div {
+  display: block;
+  margin: 0 auto; }
+
+.container {
+  display: block;
+  margin: 0 auto; }
+
+/* Condicoes */
+header {
+  color: #fff;
+  background: #dfcaca; }
+
+/* iterações */
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.item-3 {
+  width: 6em; }
+
+.item-1 {
+  width: 2em; }
+
+.item-2 {
+  width: 4em; }
+
+.puma-icon {
+  background-image: url("/images/puma.png"); }
+
+.sea-slug-icon {
+  background-image: url("/images/sea-slug.png"); }
+
+.egret-icon {
+  background-image: url("/images/egret.png"); }
+
+.salamander-icon {
+  background-image: url("/images/salamander.png"); }
+
+.item-6 {
+  width: 12em; }
+
+.item-4 {
+  width: 8em; }
+
+.item-2 {
+  width: 4em; }
 
 /*# sourceMappingURL=var.css.map */

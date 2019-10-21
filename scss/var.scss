@@ -114,3 +114,84 @@ h1 {
 h1 {
   @include titulo(14px, green);
 }  
+
+/* Funcoes */ 
+@function calc-fluid($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+div {
+  width: calc-fluid(650px, 1000px);
+}
+
+/* Place Holder */
+
+%center {
+  display: block;
+  margin: 0 auto;
+}
+
+div {
+  @extend %center;
+}
+
+.container {
+  @extend %center;
+}
+/* -------------------------*/
+@mixin center {
+  display: block;
+  margin: 0 auto;
+}
+
+div {
+  @include center;
+}
+
+.container {
+  @include center;
+}           
+
+/* Condicoes */
+
+$template: dark;
+
+header {
+  @if ($template == dark) {
+    color: #fff;
+    background: rgb(223, 202, 202);
+  } @else if ($template  == light) {
+    color: #333;
+    background: #fff;
+  } @else if ($template == sea) {
+    color: #1a8acd;
+    background: #b1d3ff;
+  } @else {
+    color: #555;
+    background: #f0f0f0;
+  }
+}
+
+/* iterações */
+
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+
+@for $i from 1 to 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+@each $animal in puma, sea-slug, egret, salamander {
+  .#{$animal}-icon {
+    background-image: url('/images/#{$animal}.png');
+  }
+}
+
+$i: 6;
+
+@while $i > 0 {
+  .item-#{$i} { 
+	width: 2em * $i; 
+  }
+  $i: $i - 2;
+}
