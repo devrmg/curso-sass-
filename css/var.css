@@ -125,4 +125,50 @@ header {
 .item-2 {
   width: 4em; }
 
+/* Media Queries */
+.sidebar {
+  width: 30%; }
+  @media screen and (orientation: landscape) {
+    .sidebar {
+      width: 40%; } }
+
+.container {
+  width: 90%; }
+  @media screen and (orientation: landscape) {
+    .container {
+      width: 100%; } }
+
+.sidebar {
+  width: 30%; }
+
+.container {
+  width: 90%; }
+
+@media screen and (orientation: landscape) {
+  .sidebar {
+    width: 40%; }
+
+  .container {
+    width: 90%; } }
+.colors {
+  background-color: blue;
+  color: white;
+  border-color: blue; }
+
+header {
+  padding: 3em; }
+  @media (min-width: 768px) {
+    header {
+      padding: 2em; } }
+
+/* @import
+@import "foo.css";                                  //importando um arquivo CSS
+@import "foo.css" min-width:400px;                      //importa o arquivo CSS //quando a tela tem no mínimo 400px
+@import "http://foo.com/bar";                       //importa arquivo via http
+@import @import url("http://fonts.googleapis.com/css?family=Droid+Sans");  //importa via url()
+
+//É possível importar vários arquivos de uma só vez:
+
+@import "file1", "file2"; */
+
 /*# sourceMappingURL=var.css.map */
